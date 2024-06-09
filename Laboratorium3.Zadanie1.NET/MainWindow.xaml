@@ -1,0 +1,56 @@
+﻿<Window x:Class="zaliczenie.SzyfrowanieTekstu.ZuzannaLukiewska.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="341" Width="620">
+    <Grid Height="434" VerticalAlignment="Top" Margin="0,0,15,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Algorytm" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+        <ComboBox x:Name="algorithmComboBox" Grid.Row="0" Grid.Column="1" Width="200" Margin="10"
+                  SelectionChanged="OnAlgorithmSelectionChanged" VerticalAlignment="Center" />
+
+        <Button x:Name="generateKeyAndIVButton" Grid.Column="2" Content="Generuj Klucz i IV"
+                Click="OnGenerateKeyAndIVButtonClick" VerticalAlignment="Top" Margin="20,14,10,0" />
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Klucz" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+        <TextBox x:Name="keyTextBox" Grid.Row="2" Grid.Column="1" Width="200" VerticalAlignment="Center" Margin="10" />
+
+        <Label Grid.Row="3" Grid.Column="0" Content="IV" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+        <TextBox x:Name="ivTextBox" Grid.Row="3" Grid.Column="1" Width="200" VerticalAlignment="Center" Margin="10" />
+
+        <Button x:Name="encryptButton" Grid.Row="4" Grid.Column="0" Content="Szyfruj" Width="200"
+                Click="OnEncryptButtonClick" VerticalAlignment="Center" Margin="10" Grid.ColumnSpan="2" />
+
+        <Button x:Name="decryptButton" Grid.Row="5" Grid.Column="0" Content="Deszyfruj" Width="200"
+                Click="OnDecryptButtonClick" VerticalAlignment="Center" Margin="10" Grid.ColumnSpan="2" />
+
+        <Label Grid.Row="6" Grid.Column="0" Content="Tekst Jawny" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10"/>
+        <TextBox x:Name="plaintextTextBox" Grid.Row="6" Grid.Column="1" Width="200" VerticalAlignment="Center" Margin="10" />
+
+        <Label Grid.Row="7" Grid.Column="0" Content="Tekst Szyfrowany" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Width="104"/>
+        <TextBox x:Name="ciphertextTextBox" Grid.Row="7" Grid.Column="1" Width="200" VerticalAlignment="Center" Margin="10" />
+
+        <Label Grid.Row="2" Grid.Column="2" Content="Tekst Jawny (HEX)" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,34,60,0" Grid.RowSpan="2"/>
+        <TextBox x:Name="plaintextHexTextBox" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" Margin="20,0,10,0" />
+
+        <Label Grid.Row="4" Grid.Column="2" Content="Tekst Szyfrowany (HEX)" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,4,46,0"/>
+        <TextBox x:Name="ciphertextHexTextBox" Grid.Row="4" Grid.Column="2" VerticalAlignment="Top" Margin="20,33,10,0" Grid.RowSpan="2" />
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "szyfrowanie_tekstu_zuzanna_lukiewska/1.0.0": {
+        "runtime": {
+          "szyfrowanie_tekstu_zuzanna_lukiewska.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "szyfrowanie_tekstu_zuzanna_lukiewska/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
